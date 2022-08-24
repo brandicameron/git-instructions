@@ -1,3 +1,7 @@
+:root {
+  --borderRadius: 8px;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
@@ -18,7 +22,7 @@ header {
   margin: 0 auto 3rem auto;
   width: 350px;
   background-color: blue;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 var(--borderRadius) var(--borderRadius);
 }
 
 h1 {
@@ -26,13 +30,25 @@ h1 {
   text-align: center;
 }
 
+details {
+  border: 2px solid #eeeeee;
+  border-radius: var(--borderRadius);
+}
+
+details + details {
+  margin-top: 0.75rem;
+}
+
 details > summary {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
   list-style: none;
   cursor: pointer;
+  padding: 0 1rem;
+  background-color: #eeeeee;
+  border-radius: var(--borderRadius);
 }
 
 details > summary::webkit-details-marker {
@@ -68,9 +84,9 @@ li + li {
 pre {
   display: inline;
   white-space: pre-line;
-  background-color: rgb(238, 238, 238);
+  background-color: #eeeeee;
   padding: 0.25rem 0.5rem;
-  border-radius: 5px;
+  border-radius: var(--borderRadius);
   width: fit-content;
 }
 
