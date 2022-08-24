@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles.css">
-  <title>Demo 2</title>
+  <title>Git &amp; Github Instructions</title>
 </head>
 
 <body>
@@ -15,7 +15,9 @@
     <section>
       <h2>Adding an existing project to Github:</h2>
       <ol>
-        <li>Open terminal, cd to project folder and type $git init</li>
+        <li>Open terminal, cd to project folder and type
+          <pre>git init</pre>
+        </li>
         <li>Go ahead and add &amp; commit the files.</li>
         <li>Open github in browser, create a new repo.</li>
         <li>Copy the Quick Setup HTTPS link (ex: https://github.com/brandicameron/demo-repo2.git)</li>
@@ -37,12 +39,48 @@
           <pre>git branch</pre> to determine what branch you're on.
         </li>
         <li>
-          <pre>git checkout -b name-of-branch</pre>
+          <pre>git checkout -b name-of-branch</pre> creates your new branch.
         </li>
         <li>
           <pre>git checkout branch-name</pre> to switch between branches.
         </li>
+        <li>
+          Add and commit changes as usual.
+        </li>
+        <li>On your first push, do
+          <pre>git push --set-upstream origin name-of-branch</pre>
+        </li>
+        <li>When you've made all your changes to the branch, go to github in the browser &amp; click the "Compare &amp;
+          pull request" button. Add a note (if needed)
+          and click "Create pull request".</li>
+        <li>To merge the branch with main, click "Merge pull request" and "Confirm".</li>
+        <li>Back in the local project, do
+          <pre>git checkout main</pre> to switch back to the main branch. Don't freak, the new changes won't be visible
+          yet...
+        </li>
+        <li>Do
+          <pre>git pull</pre> to pull the changes to your local machine.
+        </li>
+        <li>Delete the old branch with
+          <pre>git branch -d name-of-branch</pre>
+        </li>
       </ol>
+    </section>
+    <section>
+      <h2>Git Tips</h2>
+      <ul>
+        <li>If you're only adding/committing one file that's already been added before (it will say modified when doing
+          git status), you can skip the
+          <pre>add .</pre> and just do
+          <pre>git commit -am</pre> to add and commit in one step.
+        </li>
+        <li>
+          <pre>git diff branch-name</pre> shows the diff between branches.
+        </li>
+        <li>
+          <pre>git merge</pre> to merge two branches locally.
+        </li>
+      </ul>
     </section>
   </main>
 

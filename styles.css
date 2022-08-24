@@ -4,9 +4,21 @@ body {
   padding: 1rem 3rem 3rem 3rem;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 3rem;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin: 3rem 0 1rem 0;
+}
+
+p,
+li,
+pre {
+  max-width: 60ch;
 }
 
 li + li {
@@ -17,7 +29,7 @@ pre {
   display: inline;
   white-space: pre-line;
   background-color: rgb(238, 238, 238);
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 5px;
   width: fit-content;
 }
