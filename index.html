@@ -90,7 +90,8 @@
           <pre>git reset HEAD~1</pre> goes back one commit (which undoes the commit/staging just made)
         </li>
         <li>
-          <pre>git reset --hard $commitID#</pre> completely removes all staging and commits that came after.
+          <pre>git reset --hard commitID</pre> completely removes all staging and commits that came after. Use
+          <pre>git push -f origin main(or whatever branch)</pre> to get the remote repository up to date with local.
         </li>
         <li>
           <pre>git checkout -- filename</pre> to remove a file that hasn't been staged yet that you want to revert back
