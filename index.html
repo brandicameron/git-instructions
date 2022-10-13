@@ -71,6 +71,27 @@
       </ol>
     </details>
     <details>
+      <summary>Wipe Out a Branch</summary>
+      <ol>
+        <li>
+          Make sure you're on the branch...
+        </li>
+        <li>
+          <pre>git add .
+             git stash</pre> to stage and stash all changes.
+        </li>
+        <li>
+          <pre>git checkout main</pre> to switch back to main branch.
+        </li>
+        <li>
+          <pre>git stash drop</pre> to delete stashed work
+        </li>
+        <li>
+          <pre>git branch -D old-branch-name</pre> to delete the old branch.
+        </li>
+      </ol>
+    </details>
+    <details>
       <summary>Tips</summary>
       <ul>
         <li>If you're only adding/committing one file that's already been added before (it will say modified when doing
